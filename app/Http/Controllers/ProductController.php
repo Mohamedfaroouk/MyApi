@@ -20,6 +20,7 @@ class ProductController extends Controller
     public function getProducts()
     {
         $data =  Product::get();
+
         return $this->returndata("data",$data);
     }
 
@@ -120,3 +121,26 @@ public function addtoFavourite(Request $request)
 //////////////////////////////////////////////
 
 }
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////
+/* $s= DB::select('select * from mytable ');
+foreach ($s as $key ) {
+ Product::create([
+"name"=>$key->name,
+"category"=>$key->category,
+"priceS"=>$key->price0,
+"priceM"=>$key->price1,
+"priceL"=>$key->price2,
+"description"=>$key->description,
+ ]);
+} */
