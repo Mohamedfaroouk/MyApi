@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration {
 			$table->json('cart');
 			$table->timestamps();
 		});
+
+
 	}
 
 

@@ -23,6 +23,7 @@ Route::middleware('api')->group(function () {
 
               ///////////////// products /////////////////
 
+    Route::get('addproduct', 'ProductController@addProducts');
     Route::get('getProducts', 'ProductController@getProducts');
     Route::get('getProductsbyid', 'ProductController@getProdctById');
     Route::get('search', 'ProductController@Search');

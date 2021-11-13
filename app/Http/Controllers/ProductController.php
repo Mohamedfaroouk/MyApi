@@ -120,11 +120,25 @@ public function addtoFavourite(Request $request)
 
 //////////////////////////////////////////////
 
+public function addProducts(Request $request)
+{
+     $s= $request->data;
+foreach ($s as $key ) {
+ Product::create([
+"name"=>$key["name"],
+"category"=>$key["category"],
+"priceS"=>$key["priceS"],
+"priceM"=>$key["priceM"],
+"priceL"=>$key["priceL"],
+"description"=>$key["description"],
+ ]);
+}
+
 }
 
 
 
-
+}
 
 
 
